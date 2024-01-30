@@ -71,11 +71,9 @@ async def get_response(prompt: str, model: str):
             ],
         )
     elif model.startswith("custom"):
-        global client, parser
-        response = get_response_custom_model(prompt, model[7:], client = client)
+        response = get_response_custom_model(prompt, model[7:], client = CLIENT)
     elif model.startswith("sotopia"):
-        global client, parser
-        response = get_response_custom_model(prompt, model[8:], client = client)
+        response = get_response_custom_model(prompt, model[8:], client = CLIENT)
     else:
         response = await acompletion(
             model=model,
@@ -92,6 +90,7 @@ async def get_response(prompt: str, model: str):
 
 
 def get_response_custom_model(prompt: str, model: str = "gpt-3.5-turbo", base_url: str = "http://0.0.0.0:8013/v1", client: openai.OpenAI = None):
+    
     return chat_with_timeout({ "client": client, "model": model, "prompt": prompt, "timeout": 30 })
 
 def chat_with_timeout(api_parameters):
@@ -143,6 +142,9 @@ def api_call(result, api_parameters):
     result[0] = response
 
 def main(args, tasks=TASKS):
+    global CLIENT, PARSER
+    CLIENT, PARSER = None, None
+
     if "gpt" in args.model_name:
         # gpt evaluation
         os.environ["OPENAI_API_KEY"] = args.openai_api_key
@@ -152,13 +154,11 @@ def main(args, tasks=TASKS):
         litellm.vertex_location = ""  # Your Project Location
         litellm.drop_params = True
     elif args.model_name.startswith("custom"):
-        global client
-        client = openai.OpenAI(api_key="anything", base_url="http://0.0.0.0:8013/v1")
+        CLIENT = openai.OpenAI(api_key="anything", base_url="http://0.0.0.0:8013/v1")
     elif args.model_name.startswith("sotopia"):
-        global client
-        global parser
-        client = openai.OpenAI(api_key="anything", base_url="http://0.0.0.0:8013/v1")
-        parser = MMLUResponsePydanticOutputParser()
+        CLIENT = openai.OpenAI(api_key="anything", base_url="http://0.0.0.0:8013/v1")
+        PARSER = MMLUResponsePydanticOutputParser()
+        print(f"Using SOTOPIA format {PARSER}")
     else:
         args.model_name = "together_ai/mistralai/Mixtral-8x7B-Instruct-v0.1"
     if args.cot:
@@ -203,15 +203,15 @@ def main(args, tasks=TASKS):
                 train_prompt = gen_prompt(dev_df, task, k)
                 prompt = train_prompt + prompt_end
                 if args.model_name.startswith("sotopia"):
-                    prompt = SOTOPIA_FORMAT.format(prompt) + parser.get_format_instructions()
-                    
+                    prompt = SOTOPIA_FORMAT.format(prompt) + PARSER.get_format_instructions()
+
                 label = test_df.iloc[i, test_df.shape[1] - 1]
                 response = asyncio.run(get_response(prompt, args.model_name))
                 
                 # 0 means the answer character [A, B, C, D] (sometimes model will output more)
                 if args.model_name.startswith("sotopia"):
                     try:
-                        ans_model = parser.parse(response["choices"][0]["message"]["content"]).choice
+                        ans_model = PARSER.parse(response["choices"][0]["message"]["content"]).choice
                     except:
                         ans_model = "*"
                         print("Use * as default answer")
