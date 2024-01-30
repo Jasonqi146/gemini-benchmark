@@ -58,7 +58,6 @@ TASKS = [
     "world_religions",
 ]
 
-
 # Below is for chain of thought
 def test_answer_mmlu_(pred_str, ans):
     pattern = "the answer is ("

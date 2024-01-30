@@ -4,3 +4,7 @@
 .ipynb_checkpoints
 
 __pycache__
+
+*.log
+cache_*/
+*outputs/
