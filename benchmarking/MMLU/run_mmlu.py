@@ -216,7 +216,7 @@ def main(args, tasks=TASKS):
                         ans_model = "*"
                         print("Use * as default answer")
                 else:
-                    ans_model = response["choices"][0]["message"]["content"][0]
+                    ans_model = response["choices"][0]["message"]["content"][0] if response["choices"][0]["message"]["content"] else '*'
 
                 correct = ans_model == label
                 if correct:
