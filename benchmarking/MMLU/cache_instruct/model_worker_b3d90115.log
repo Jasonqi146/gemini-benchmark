@@ -1,0 +1,17 @@
+2024-01-29 19:41:51 | INFO | model_worker | args: Namespace(host='localhost', port=21002, worker_address='http://localhost:21002', controller_address='http://localhost:21001', model_path='/data/tir/projects/tir6/bisk/ruiyiwan/selftrain/init-selftrain-round-1/Mistral-7B-Instruct-v0.1', revision='main', device='cuda', gpus=None, num_gpus=2, max_gpu_memory=None, dtype=None, load_8bit=False, cpu_offloading=False, gptq_ckpt=None, gptq_wbits=16, gptq_groupsize=-1, gptq_act_order=False, awq_ckpt=None, awq_wbits=16, awq_groupsize=-1, enable_exllama=False, exllama_max_seq_len=4096, exllama_gpu_split=None, exllama_cache_8bit=False, enable_xft=False, xft_max_seq_len=4096, xft_dtype=None, model_names=None, conv_template=None, embed_in_truncate=False, limit_worker_concurrency=5, stream_interval=2, no_register=False, seed=None, debug=False, ssl=False)
+2024-01-29 19:41:51 | INFO | model_worker | Loading the model ['Mistral-7B-Instruct-v0.1'] on worker b3d90115 ...
+2024-01-29 19:41:52 | ERROR | stderr | Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]
+2024-01-29 19:41:52 | ERROR | stderr | /home/zqi2/miniconda3/lib/python3.11/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+2024-01-29 19:41:52 | ERROR | stderr |   return self.fget.__get__(instance, owner)()
+2024-01-29 19:41:55 | ERROR | stderr | Loading checkpoint shards:  50%|█████     | 1/2 [00:02<00:02,  2.99s/it]
+2024-01-29 19:41:56 | ERROR | stderr | Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  1.99s/it]
+2024-01-29 19:41:56 | ERROR | stderr | Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.14s/it]
+2024-01-29 19:41:56 | ERROR | stderr | 
+2024-01-29 19:41:56 | INFO | model_worker | Register to controller
+2024-01-29 19:41:56 | ERROR | stderr | INFO:     Started server process [921064]
+2024-01-29 19:41:56 | ERROR | stderr | INFO:     Waiting for application startup.
+2024-01-29 19:41:56 | ERROR | stderr | INFO:     Application startup complete.
+2024-01-29 19:41:56 | ERROR | stderr | INFO:     Uvicorn running on http://localhost:21002 (Press CTRL+C to quit)
+2024-01-29 19:42:41 | INFO | model_worker | Send heart beat. Models: ['Mistral-7B-Instruct-v0.1']. Semaphore: None. call_ct: 0. worker_id: b3d90115. 
+2024-01-29 19:43:26 | INFO | model_worker | Send heart beat. Models: ['Mistral-7B-Instruct-v0.1']. Semaphore: None. call_ct: 0. worker_id: b3d90115. 
+2024-01-29 19:44:11 | INFO | model_worker | Send heart beat. Models: ['Mistral-7B-Instruct-v0.1']. Semaphore: None. call_ct: 0. worker_id: b3d90115. 

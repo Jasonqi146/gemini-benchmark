@@ -1,0 +1,1 @@
+python run_mmlu.py --model_name custom/checkpoint_improve-0_epoch-18 --num_examples 5 > mmlu.log 2>&1

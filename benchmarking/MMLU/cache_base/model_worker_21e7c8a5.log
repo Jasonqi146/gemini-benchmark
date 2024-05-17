@@ -1,0 +1,227 @@
+2024-01-29 19:41:51 | INFO | model_worker | args: Namespace(host='localhost', port=21002, worker_address='http://localhost:21002', controller_address='http://localhost:21001', model_path='/data/tir/projects/tir6/bisk/ruiyiwan/selftrain/init-selftrain-round-2-base/Mistral-7B-v0.1', revision='main', device='cuda', gpus=None, num_gpus=2, max_gpu_memory=None, dtype=None, load_8bit=False, cpu_offloading=False, gptq_ckpt=None, gptq_wbits=16, gptq_groupsize=-1, gptq_act_order=False, awq_ckpt=None, awq_wbits=16, awq_groupsize=-1, enable_exllama=False, exllama_max_seq_len=4096, exllama_gpu_split=None, exllama_cache_8bit=False, enable_xft=False, xft_max_seq_len=4096, xft_dtype=None, model_names=None, conv_template=None, embed_in_truncate=False, limit_worker_concurrency=5, stream_interval=2, no_register=False, seed=None, debug=False, ssl=False)
+2024-01-29 19:41:51 | INFO | model_worker | Loading the model ['Mistral-7B-v0.1'] on worker 21e7c8a5 ...
+2024-01-29 19:41:52 | ERROR | stderr | Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]
+2024-01-29 19:42:13 | ERROR | stderr | Loading checkpoint shards:  50%|█████     | 1/2 [00:21<00:21, 21.57s/it]
+2024-01-29 19:42:28 | ERROR | stderr | Loading checkpoint shards: 100%|██████████| 2/2 [00:35<00:00, 17.23s/it]
+2024-01-29 19:42:28 | ERROR | stderr | Loading checkpoint shards: 100%|██████████| 2/2 [00:35<00:00, 17.89s/it]
+2024-01-29 19:42:28 | ERROR | stderr | 
+2024-01-29 19:42:28 | INFO | model_worker | Register to controller
+2024-01-29 19:42:28 | ERROR | stderr | INFO:     Started server process [2865221]
+2024-01-29 19:42:28 | ERROR | stderr | INFO:     Waiting for application startup.
+2024-01-29 19:42:28 | ERROR | stderr | INFO:     Application startup complete.
+2024-01-29 19:42:28 | ERROR | stderr | INFO:     Uvicorn running on http://localhost:21002 (Press CTRL+C to quit)
+2024-01-29 19:43:13 | INFO | model_worker | Send heart beat. Models: ['Mistral-7B-v0.1']. Semaphore: None. call_ct: 0. worker_id: 21e7c8a5. 
+2024-01-29 19:43:58 | INFO | model_worker | Send heart beat. Models: ['Mistral-7B-v0.1']. Semaphore: None. call_ct: 0. worker_id: 21e7c8a5. 
+2024-01-29 19:44:43 | INFO | model_worker | Send heart beat. Models: ['Mistral-7B-v0.1']. Semaphore: None. call_ct: 0. worker_id: 21e7c8a5. 
+2024-01-29 19:44:50 | INFO | stdout | INFO:     ::1:48110 - "POST /worker_get_conv_template HTTP/1.1" 200 OK
+2024-01-29 19:44:50 | INFO | stdout | INFO:     ::1:48126 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:44:50 | INFO | stdout | INFO:     ::1:48134 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:44:58 | INFO | stdout | INFO:     ::1:48136 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:44:58 | INFO | stdout | INFO:     ::1:39928 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:44:58 | INFO | stdout | INFO:     ::1:39938 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:45:06 | INFO | stdout | INFO:     ::1:39952 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:45:06 | INFO | stdout | INFO:     ::1:40396 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:45:06 | INFO | stdout | INFO:     ::1:40398 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:45:14 | INFO | stdout | INFO:     ::1:40408 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:45:14 | INFO | stdout | INFO:     ::1:34646 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:45:14 | INFO | stdout | INFO:     ::1:34656 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:45:21 | INFO | stdout | INFO:     ::1:34672 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:45:21 | INFO | stdout | INFO:     ::1:34684 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:45:21 | INFO | stdout | INFO:     ::1:34698 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:45:28 | INFO | model_worker | Send heart beat. Models: ['Mistral-7B-v0.1']. Semaphore: Semaphore(value=4, locked=False). call_ct: 5. worker_id: 21e7c8a5. 
+2024-01-29 19:45:29 | INFO | stdout | INFO:     ::1:34706 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:45:29 | INFO | stdout | INFO:     ::1:57738 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:45:29 | INFO | stdout | INFO:     ::1:57740 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:45:36 | INFO | stdout | INFO:     ::1:57746 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:45:36 | INFO | stdout | INFO:     ::1:35572 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:45:36 | INFO | stdout | INFO:     ::1:35582 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:45:44 | INFO | stdout | INFO:     ::1:35598 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:45:44 | INFO | stdout | INFO:     ::1:49212 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:45:44 | INFO | stdout | INFO:     ::1:49226 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:45:52 | INFO | stdout | INFO:     ::1:49230 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:45:52 | INFO | stdout | INFO:     ::1:49246 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:45:52 | INFO | stdout | INFO:     ::1:49260 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:45:59 | INFO | stdout | INFO:     ::1:49268 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:45:59 | INFO | stdout | INFO:     ::1:39804 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:45:59 | INFO | stdout | INFO:     ::1:39810 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:46:07 | INFO | stdout | INFO:     ::1:39822 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:46:07 | INFO | stdout | INFO:     ::1:34318 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:46:07 | INFO | stdout | INFO:     ::1:34332 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:46:13 | INFO | model_worker | Send heart beat. Models: ['Mistral-7B-v0.1']. Semaphore: Semaphore(value=4, locked=False). call_ct: 11. worker_id: 21e7c8a5. 
+2024-01-29 19:46:14 | INFO | stdout | INFO:     ::1:34348 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:46:14 | INFO | stdout | INFO:     ::1:36136 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:46:14 | INFO | stdout | INFO:     ::1:36138 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:46:22 | INFO | stdout | INFO:     ::1:36140 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:46:22 | INFO | stdout | INFO:     ::1:36144 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:46:22 | INFO | stdout | INFO:     ::1:36148 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:46:30 | INFO | stdout | INFO:     ::1:36160 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:46:30 | INFO | stdout | INFO:     ::1:42572 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:46:30 | INFO | stdout | INFO:     ::1:42576 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:46:37 | INFO | stdout | INFO:     ::1:42578 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:46:37 | INFO | stdout | INFO:     ::1:42554 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:46:37 | INFO | stdout | INFO:     ::1:42556 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:46:45 | INFO | stdout | INFO:     ::1:42564 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:46:45 | INFO | stdout | INFO:     ::1:49386 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:46:45 | INFO | stdout | INFO:     ::1:49392 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:46:53 | INFO | stdout | INFO:     ::1:49396 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:46:53 | INFO | stdout | INFO:     ::1:49406 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:46:53 | INFO | stdout | INFO:     ::1:49418 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:46:58 | INFO | model_worker | Send heart beat. Models: ['Mistral-7B-v0.1']. Semaphore: Semaphore(value=4, locked=False). call_ct: 17. worker_id: 21e7c8a5. 
+2024-01-29 19:47:00 | INFO | stdout | INFO:     ::1:49420 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:47:00 | INFO | stdout | INFO:     ::1:56844 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:47:00 | INFO | stdout | INFO:     ::1:56856 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:47:08 | INFO | stdout | INFO:     ::1:56866 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:47:08 | INFO | stdout | INFO:     ::1:49012 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:47:08 | INFO | stdout | INFO:     ::1:49020 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:47:15 | INFO | stdout | INFO:     ::1:49030 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:47:16 | INFO | stdout | INFO:     ::1:38916 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:47:16 | INFO | stdout | INFO:     ::1:38930 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:47:23 | INFO | stdout | INFO:     ::1:38940 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:47:23 | INFO | stdout | INFO:     ::1:59144 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:47:23 | INFO | stdout | INFO:     ::1:59154 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:47:31 | INFO | stdout | INFO:     ::1:59164 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:47:31 | INFO | stdout | INFO:     ::1:59168 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:47:31 | INFO | stdout | INFO:     ::1:59180 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:47:38 | INFO | stdout | INFO:     ::1:59188 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:47:38 | INFO | stdout | INFO:     ::1:53682 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:47:38 | INFO | stdout | INFO:     ::1:53698 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:47:43 | INFO | model_worker | Send heart beat. Models: ['Mistral-7B-v0.1']. Semaphore: Semaphore(value=4, locked=False). call_ct: 23. worker_id: 21e7c8a5. 
+2024-01-29 19:47:46 | INFO | stdout | INFO:     ::1:53706 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:47:46 | INFO | stdout | INFO:     ::1:48848 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:47:46 | INFO | stdout | INFO:     ::1:48862 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:47:54 | INFO | stdout | INFO:     ::1:48868 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:47:54 | INFO | stdout | INFO:     ::1:54410 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:47:54 | INFO | stdout | INFO:     ::1:54422 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:48:01 | INFO | stdout | INFO:     ::1:54432 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:48:01 | INFO | stdout | INFO:     ::1:54442 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:48:01 | INFO | stdout | INFO:     ::1:54456 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:48:09 | INFO | stdout | INFO:     ::1:54464 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:48:09 | INFO | stdout | INFO:     ::1:51202 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:48:09 | INFO | stdout | INFO:     ::1:51210 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:48:17 | INFO | stdout | INFO:     ::1:51216 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:48:17 | INFO | stdout | INFO:     ::1:40650 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:48:17 | INFO | stdout | INFO:     ::1:40662 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:48:24 | INFO | stdout | INFO:     ::1:40674 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:48:24 | INFO | stdout | INFO:     ::1:37198 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:48:24 | INFO | stdout | INFO:     ::1:37208 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:48:28 | INFO | model_worker | Send heart beat. Models: ['Mistral-7B-v0.1']. Semaphore: Semaphore(value=4, locked=False). call_ct: 29. worker_id: 21e7c8a5. 
+2024-01-29 19:48:32 | INFO | stdout | INFO:     ::1:37216 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:48:32 | INFO | stdout | INFO:     ::1:37224 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:48:32 | INFO | stdout | INFO:     ::1:37232 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:48:39 | INFO | stdout | INFO:     ::1:37242 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:48:39 | INFO | stdout | INFO:     ::1:36370 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:48:39 | INFO | stdout | INFO:     ::1:36376 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:48:47 | INFO | stdout | INFO:     ::1:36380 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:48:47 | INFO | stdout | INFO:     ::1:50572 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:48:47 | INFO | stdout | INFO:     ::1:50586 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:48:55 | INFO | stdout | INFO:     ::1:50598 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:48:55 | INFO | stdout | INFO:     ::1:37624 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:48:55 | INFO | stdout | INFO:     ::1:37626 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:49:02 | INFO | stdout | INFO:     ::1:37632 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:49:02 | INFO | stdout | INFO:     ::1:37638 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:49:02 | INFO | stdout | INFO:     ::1:37652 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:49:10 | INFO | stdout | INFO:     ::1:37654 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:49:10 | INFO | stdout | INFO:     ::1:49858 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:49:10 | INFO | stdout | INFO:     ::1:49870 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:49:13 | INFO | model_worker | Send heart beat. Models: ['Mistral-7B-v0.1']. Semaphore: Semaphore(value=4, locked=False). call_ct: 35. worker_id: 21e7c8a5. 
+2024-01-29 19:49:18 | INFO | stdout | INFO:     ::1:49886 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:49:18 | INFO | stdout | INFO:     ::1:37166 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:49:18 | INFO | stdout | INFO:     ::1:37170 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:49:25 | INFO | stdout | INFO:     ::1:37176 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:49:25 | INFO | stdout | INFO:     ::1:48062 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:49:25 | INFO | stdout | INFO:     ::1:48078 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:49:33 | INFO | stdout | INFO:     ::1:48084 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:49:33 | INFO | stdout | INFO:     ::1:54328 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:49:33 | INFO | stdout | INFO:     ::1:54338 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:49:41 | INFO | stdout | INFO:     ::1:54342 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:49:41 | INFO | stdout | INFO:     ::1:54348 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:49:41 | INFO | stdout | INFO:     ::1:54350 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:49:48 | INFO | stdout | INFO:     ::1:54364 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:49:48 | INFO | stdout | INFO:     ::1:44458 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:49:48 | INFO | stdout | INFO:     ::1:44474 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:49:56 | INFO | stdout | INFO:     ::1:44484 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:49:56 | INFO | stdout | INFO:     ::1:55578 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:49:56 | INFO | stdout | INFO:     ::1:55590 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:49:58 | INFO | model_worker | Send heart beat. Models: ['Mistral-7B-v0.1']. Semaphore: Semaphore(value=4, locked=False). call_ct: 41. worker_id: 21e7c8a5. 
+2024-01-29 19:50:04 | INFO | stdout | INFO:     ::1:55606 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:50:04 | INFO | stdout | INFO:     ::1:54262 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:50:04 | INFO | stdout | INFO:     ::1:54278 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:50:11 | INFO | stdout | INFO:     ::1:54294 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:50:11 | INFO | stdout | INFO:     ::1:54298 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:50:11 | INFO | stdout | INFO:     ::1:54300 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:50:19 | INFO | stdout | INFO:     ::1:54312 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:50:19 | INFO | stdout | INFO:     ::1:40052 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:50:19 | INFO | stdout | INFO:     ::1:40060 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:50:26 | INFO | stdout | INFO:     ::1:40076 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:50:26 | INFO | stdout | INFO:     ::1:48204 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:50:26 | INFO | stdout | INFO:     ::1:48210 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:50:34 | INFO | stdout | INFO:     ::1:48214 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:50:34 | INFO | stdout | INFO:     ::1:41334 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:50:34 | INFO | stdout | INFO:     ::1:41340 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:50:42 | INFO | stdout | INFO:     ::1:41348 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:50:42 | INFO | stdout | INFO:     ::1:41354 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:50:42 | INFO | stdout | INFO:     ::1:41362 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:50:43 | INFO | model_worker | Send heart beat. Models: ['Mistral-7B-v0.1']. Semaphore: Semaphore(value=4, locked=False). call_ct: 47. worker_id: 21e7c8a5. 
+2024-01-29 19:50:49 | INFO | stdout | INFO:     ::1:41364 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:50:49 | INFO | stdout | INFO:     ::1:44024 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:50:49 | INFO | stdout | INFO:     ::1:44038 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:50:57 | INFO | stdout | INFO:     ::1:44052 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:50:57 | INFO | stdout | INFO:     ::1:57852 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:50:57 | INFO | stdout | INFO:     ::1:57864 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:51:05 | INFO | stdout | INFO:     ::1:57868 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:51:05 | INFO | stdout | INFO:     ::1:34190 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:51:05 | INFO | stdout | INFO:     ::1:34206 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:51:13 | INFO | stdout | INFO:     ::1:34210 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:51:13 | INFO | stdout | INFO:     ::1:34224 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:51:13 | INFO | stdout | INFO:     ::1:34232 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:51:20 | INFO | stdout | INFO:     ::1:34234 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:51:20 | INFO | stdout | INFO:     ::1:50698 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:51:20 | INFO | stdout | INFO:     ::1:50710 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:51:28 | INFO | stdout | INFO:     ::1:50722 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:51:28 | INFO | stdout | INFO:     ::1:60824 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:51:28 | INFO | stdout | INFO:     ::1:60830 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:51:28 | INFO | model_worker | Send heart beat. Models: ['Mistral-7B-v0.1']. Semaphore: Semaphore(value=4, locked=False). call_ct: 53. worker_id: 21e7c8a5. 
+2024-01-29 19:51:35 | INFO | stdout | INFO:     ::1:60836 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:51:35 | INFO | stdout | INFO:     ::1:46024 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:51:35 | INFO | stdout | INFO:     ::1:46030 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:51:43 | INFO | stdout | INFO:     ::1:46042 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:51:43 | INFO | stdout | INFO:     ::1:58962 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:51:43 | INFO | stdout | INFO:     ::1:58978 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:51:51 | INFO | stdout | INFO:     ::1:58988 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:51:51 | INFO | stdout | INFO:     ::1:58992 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:51:51 | INFO | stdout | INFO:     ::1:58996 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:51:58 | INFO | stdout | INFO:     ::1:58998 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:51:58 | INFO | stdout | INFO:     ::1:51336 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:51:58 | INFO | stdout | INFO:     ::1:51352 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:52:06 | INFO | stdout | INFO:     ::1:51366 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:52:06 | INFO | stdout | INFO:     ::1:52936 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:52:06 | INFO | stdout | INFO:     ::1:52938 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:52:13 | INFO | model_worker | Send heart beat. Models: ['Mistral-7B-v0.1']. Semaphore: Semaphore(value=4, locked=False). call_ct: 58. worker_id: 21e7c8a5. 
+2024-01-29 19:52:14 | INFO | stdout | INFO:     ::1:52952 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:52:14 | INFO | stdout | INFO:     ::1:37112 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:52:14 | INFO | stdout | INFO:     ::1:37114 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:52:21 | INFO | stdout | INFO:     ::1:37126 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:52:21 | INFO | stdout | INFO:     ::1:37132 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:52:21 | INFO | stdout | INFO:     ::1:37136 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:52:29 | INFO | stdout | INFO:     ::1:37142 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:52:29 | INFO | stdout | INFO:     ::1:50772 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:52:29 | INFO | stdout | INFO:     ::1:50782 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:52:37 | INFO | stdout | INFO:     ::1:50790 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:52:37 | INFO | stdout | INFO:     ::1:41480 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:52:37 | INFO | stdout | INFO:     ::1:41484 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:52:44 | INFO | stdout | INFO:     ::1:41498 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:52:44 | INFO | stdout | INFO:     ::1:60716 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:52:44 | INFO | stdout | INFO:     ::1:60730 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:52:52 | INFO | stdout | INFO:     ::1:60742 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:52:52 | INFO | stdout | INFO:     ::1:60744 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:52:52 | INFO | stdout | INFO:     ::1:60758 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:52:58 | INFO | model_worker | Send heart beat. Models: ['Mistral-7B-v0.1']. Semaphore: Semaphore(value=4, locked=False). call_ct: 64. worker_id: 21e7c8a5. 
+2024-01-29 19:52:59 | INFO | stdout | INFO:     ::1:60762 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:53:00 | INFO | stdout | INFO:     ::1:43932 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:53:00 | INFO | stdout | INFO:     ::1:43942 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:53:07 | INFO | stdout | INFO:     ::1:43950 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:53:07 | INFO | stdout | INFO:     ::1:50240 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:53:07 | INFO | stdout | INFO:     ::1:50248 - "POST /count_token HTTP/1.1" 200 OK
+2024-01-29 19:53:15 | INFO | stdout | INFO:     ::1:50254 - "POST /worker_generate HTTP/1.1" 200 OK
+2024-01-29 19:53:15 | INFO | stdout | INFO:     ::1:52342 - "POST /model_details HTTP/1.1" 200 OK
+2024-01-29 19:53:15 | INFO | stdout | INFO:     ::1:52356 - "POST /count_token HTTP/1.1" 200 OK

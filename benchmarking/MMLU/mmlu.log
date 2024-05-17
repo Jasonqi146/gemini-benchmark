@@ -1,0 +1,63 @@
+  0%|          | 0/9 [00:00<?, ?it/s]Testing professional_law ...
+
+  0%|          | 0/1534 [00:00<?, ?it/s][A
+  0%|          | 1/1534 [00:02<1:04:41,  2.53s/it][A
+  0%|          | 2/1534 [00:04<56:09,  2.20s/it]  [A
+  0%|          | 3/1534 [00:06<54:43,  2.14s/it][A
+  0%|          | 4/1534 [00:08<53:56,  2.12s/it][A
+  0%|          | 5/1534 [00:11<1:04:47,  2.54s/it][A
+  0%|          | 6/1534 [00:13<55:15,  2.17s/it]  [A
+  0%|          | 7/1534 [00:15<54:32,  2.14s/it][A
+  1%|          | 8/1534 [00:17<54:45,  2.15s/it][A
+  1%|          | 9/1534 [00:19<50:42,  2.00s/it][A
+  1%|          | 10/1534 [00:21<51:54,  2.04s/it][A
+  1%|          | 11/1534 [00:23<48:02,  1.89s/it][A
+  1%|          | 12/1534 [00:24<46:46,  1.84s/it][A
+  1%|          | 13/1534 [00:26<47:48,  1.89s/it][A
+  1%|          | 14/1534 [00:28<49:09,  1.94s/it][A
+  1%|          | 15/1534 [00:30<50:09,  1.98s/it][A
+  1%|          | 16/1534 [00:32<47:28,  1.88s/it][A
+  1%|          | 17/1534 [00:34<46:43,  1.85s/it][A
+  1%|          | 18/1534 [00:36<48:36,  1.92s/it][A
+  1%|          | 19/1534 [00:38<49:46,  1.97s/it][A
+  1%|▏         | 20/1534 [00:40<50:25,  2.00s/it][A
+  1%|▏         | 21/1534 [00:42<50:19,  2.00s/it][A
+  1%|▏         | 22/1534 [00:44<50:19,  2.00s/it][A
+  1%|▏         | 23/1534 [00:46<51:03,  2.03s/it][A
+  2%|▏         | 24/1534 [00:48<51:21,  2.04s/it][A
+  2%|▏         | 25/1534 [00:50<47:45,  1.90s/it][A
+  2%|▏         | 26/1534 [00:52<49:13,  1.96s/it][A
+  2%|▏         | 27/1534 [00:54<48:31,  1.93s/it][A
+  2%|▏         | 28/1534 [00:56<49:48,  1.98s/it][A
+  2%|▏         | 29/1534 [00:58<49:50,  1.99s/it][A
+  2%|▏         | 30/1534 [01:00<50:20,  2.01s/it][A
+  2%|▏         | 31/1534 [01:02<51:09,  2.04s/it][A
+  2%|▏         | 32/1534 [01:04<50:50,  2.03s/it][A
+  2%|▏         | 33/1534 [01:06<50:42,  2.03s/it][A
+  2%|▏         | 34/1534 [01:08<51:18,  2.05s/it][A
+  2%|▏         | 35/1534 [01:10<52:00,  2.08s/it][A
+  2%|▏         | 36/1534 [01:12<48:16,  1.93s/it][A  2%|▏         | 36/1534 [01:14<51:35,  2.07s/it]
+  0%|          | 0/9 [01:14<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/zqi2/miniconda3/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zqi2/miniconda3/lib/python3.11/asyncio/base_events.py", line 653, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/zqi2/gemini-benchmark/benchmarking/MMLU/run_mmlu.py", line 269, in <module>
+    main(args)
+  File "/home/zqi2/gemini-benchmark/benchmarking/MMLU/run_mmlu.py", line 203, in main
+    response = asyncio.run(get_response(prompt, args.model_name))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zqi2/miniconda3/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/home/zqi2/miniconda3/lib/python3.11/asyncio/runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
